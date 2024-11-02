@@ -54,11 +54,4 @@ app.post("/uploadImage", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-  console.log("环境变量检查:");
-  console.log("JWT exists:", !!process.env.JWT_SECRET_KEY); // 这个能获取到
-  console.log("Stripe exists:", !!process.env.STRIPE_SECRET_KEY); // 这个获取不到
-  console.log(
-    "变量名称:",
-    Object.keys(process.env).filter((key) => key.includes("STRIPE"))
-  );
 });
